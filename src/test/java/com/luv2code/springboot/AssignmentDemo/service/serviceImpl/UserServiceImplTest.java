@@ -1,4 +1,4 @@
-package com.luv2code.springboot.AssignmentDemo.service.serviceImpl.AssignmentDemo.service.serviceImpl;
+package com.luv2code.springboot.AssignmentDemo.service.serviceImpl;
 import com.luv2code.springboot.AssignmentDemo.service.serviceImpl.AssignmentDemo.dao.UserRepository;
 import com.luv2code.springboot.AssignmentDemo.service.serviceImpl.AssignmentDemo.entity.User;
 import com.luv2code.springboot.AssignmentDemo.service.serviceImpl.AssignmentDemo.service.serviceImpl.UserServiceImpl;
