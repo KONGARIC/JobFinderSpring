@@ -14,4 +14,5 @@ public interface SkillService {
     public void deleteSkill(int id);
 
     public void save(Skill skill);
+    public List<Integer>  getIdsWithSkills(String[] skills);
 }

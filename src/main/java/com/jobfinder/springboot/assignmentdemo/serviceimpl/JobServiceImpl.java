@@ -8,7 +8,6 @@ import com.jobfinder.springboot.assignmentdemo.entity.Job;
 
 import com.jobfinder.springboot.assignmentdemo.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,7 +31,7 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
-    public List<Job> filterAllJobBasedOnSkill(String skill) {
+    public Job filterAllJobBasedOnSkill(String skill) {
         return jobRepository.filterJobBasedOnSkill(skill);
     }
 
@@ -54,11 +53,24 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
+    public List<Job> findJobTitle(String str[]) {
+        return jobRepository.findByTitle(str);
+    }
+
+    @Override
+    public List<Job> filter(String[] skills, String[] locations) {
+        return jobRepository.filter(skills,locations);
+    }
+
+    @Override
     public void save(Job job) {
         jobRepository.save(job);
     }
 
-
+    @Override
+    public List<Job> getJobsByIds(List<Integer> ids) {
+        return jobRepository.getJobsByIds(ids);
+    }
 
 
 }
