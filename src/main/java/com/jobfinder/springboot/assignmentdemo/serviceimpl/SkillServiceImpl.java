@@ -42,4 +42,9 @@ public class SkillServiceImpl implements SkillService {
     public void save(Skill skill) {
         skillRepository.save(skill);
     }
+
+    @Override
+    public List<Integer> getIdsWithSkills(String[] skills) {
+        return skillRepository.getIdsWithSkills(skills);
+    }
 }

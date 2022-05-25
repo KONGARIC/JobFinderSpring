@@ -76,9 +76,21 @@ public class JobController {
     }
 
 
-    @GetMapping("/jobswith")
-    public List<Job> filter(@RequestParam String skill){
-        List<Job> theJob=jobService.filterAllJobBasedOnSkill(skill);
+    @GetMapping("/jobs/filter")
+    public List<Job> filter(@RequestParam(required=false) String skills[],@RequestParam(required=false) String locations[]){
+
+        System.out.println(skills[0]);
+        System.out.println(locations[0]);
+
+
+
+
+
+        List<Integer>  ids=skillService.getIdsWithSkills(skills);
+        System.out.println(ids);
+
+        //List<Job> theJob=jobService.getJobsByIds(ids);
+        List<Job> theJob=jobService.filter(skills,locations);
         if(theJob==null){
             throw new RuntimeException("No Jobs is not found");
 
