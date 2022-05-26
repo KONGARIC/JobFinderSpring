@@ -18,18 +18,18 @@
 	<properties>
 		<java.version>11</java.version>
 
-				<sonar.organization>chandra</sonar.organization>
-				<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.organization>jobkey</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<jacoco.version>0.8.6</jacoco.version>
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.exclusions>
-					**/com/luv2code/springboot/assignmentdemo/config/**,
-					**/com/luv2code/springboot/assignmentdemo/controller/**,
-					**/com/luv2code/springboot/assignmentdemo/dao/**,
-					**/com/luv2code/springboot/assignmentdemo/entity/**,
-					**/com/luv2code/springboot/assignmentdemo/AssignmentDemoApplication**,
-					**/com/luv2code/springboot/assignmentdemo/exception/**,
+					**com/jobfinder/springboot/assignmentdemo/config/**,
+					**/com/jobfinder/springboot/assignmentdemo/controller/**,
+					**/com/jobfinder/springboot/assignmentdemo/dao/**,
+					**/com/jobfinder/springboot/assignmentdemo/entity/**,
+					**/com/jobfinder/springboot/assignmentdemo/AssignmentDemoApplication**,
+					**/com/jobfinder/springboot/assignmentdemo/exception/**,
 
 				</sonar.exclusions>
 	</properties>
@@ -46,10 +46,7 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-<!--		</dependency>-->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
@@ -61,6 +58,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
@@ -148,182 +149,4 @@
 	</build>
 
 </project>
-
-
-
-		<!--<?xml version="1.0" encoding="UTF-8"?>-->
-<!--<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
-<!--	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">-->
-<!--	<modelVersion>4.0.0</modelVersion>-->
-<!--	<parent>-->
-<!--		<groupId>org.springframework.boot</groupId>-->
-<!--		<artifactId>spring-boot-starter-parent</artifactId>-->
-<!--		<version>2.6.6</version>-->
-<!--		<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-<!--	</parent>-->
-<!--	<groupId>com.luv2code.springboot</groupId>-->
-<!--	<artifactId>AssignmentDemo</artifactId>-->
-<!--	<version>0.0.1-SNAPSHOT</version>-->
-<!--	<name>AssignmentDemo</name>-->
-<!--	<description>Demo project for Spring Boot</description>-->
-<!--	<properties>-->
-<!--		<java.version>11</java.version>-->
-
-<!--		<sonar.organization>chandra</sonar.organization>-->
-<!--		<sonar.host.url>https://sonarcloud.io</sonar.host.url>-->
-<!--		<jacoco.version>0.8.6</jacoco.version>-->
-<!--		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>-->
-<!--		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>-->
-<!--		<sonar.sources>src/main/java</sonar.sources>-->
-
-<!--		<sonar.language>java</sonar.language>-->
-<!--&lt;!&ndash;		<sonar.coverage.exclusions>**/com/luv2code/springboot/AssignmetDemo/entity/**</sonar.coverage.exclusions>&ndash;&gt;-->
-
-<!--&lt;!&ndash;		<sonar.coverage.exclusions>**/com/luv2code/springboot/AssignmetDemo/config/**</sonar.coverage.exclusions>&ndash;&gt;-->
-<!--&lt;!&ndash;		<sonar.coverage.exclusions>**/com/luv2code/springboot/AssignmetDemo/controller/**</sonar.coverage.exclusions>&ndash;&gt;-->
-<!--&lt;!&ndash;		<sonar.coverage.exclusions>**/com/luv2code/springboot/AssignmetDemo/dao/**</sonar.coverage.exclusions>&ndash;&gt;-->
-<!--&lt;!&ndash;		<sonar.coverage.exclusions>**/com/luv2code/springboot/AssignmetDemo/AssignmentDemoApplication**</sonar.coverage.exclusions>&ndash;&gt;-->
-<!--&lt;!&ndash;		<sonar.coverage.exclusions>**/com/springboot/demo/studentcourse/exception/**</sonar.coverage.exclusions>&ndash;&gt;-->
-<!--&lt;!&ndash;		<sonar.coverage.exclusions>**/com/luv2code/springboot/AssignmetDemo/service/**</sonar.coverage.exclusions>&ndash;&gt;-->
-<!--		<sonar.exclusions>-->
-<!--			**/com/luv2code/springboot/AssignmentDemo/config/**,-->
-<!--			**/com/luv2code/springboot/AssignmentDemo/controller/**,-->
-<!--			**/com/luv2code/springboot/AssignmentDemo/dao/**,-->
-<!--			**/com/luv2code/springboot/AssignmentDemo/entity/**,-->
-<!--			**/com/luv2code/springboot/AssignmentDemo/AssignmentDemoApplication**,-->
-<!--			**/com/luv2code/springboot/AssignmentDemo/exception/**,-->
-
-<!--		</sonar.exclusions>-->
-
-<!--	</properties>-->
-<!--	<dependencies>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-web</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-data-jpa</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-security</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.thymeleaf.extras</groupId>-->
-<!--			<artifactId>thymeleaf-extras-springsecurity5</artifactId>-->
-<!--		</dependency>-->
-<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.aspectj/aspectjweaver &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.aspectj</groupId>-->
-<!--			<artifactId>aspectjweaver</artifactId>-->
-<!--			<version>1.9.9.1</version>-->
-<!--			<scope>runtime</scope>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-validation</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.projectlombok</groupId>-->
-<!--			<artifactId>lombok</artifactId>-->
-<!--			<optional>true</optional>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>com.h2database</groupId>-->
-<!--			<artifactId>h2</artifactId>-->
-<!--			<scope>runtime</scope>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>com.github.javafaker</groupId>-->
-<!--			<artifactId>javafaker</artifactId>-->
-<!--			<version>1.0.2</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.slf4j</groupId>-->
-<!--			<artifactId>slf4j-api</artifactId>-->
-<!--			<version>1.7.36</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>junit</groupId>-->
-<!--			<artifactId>junit</artifactId>-->
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.mockito</groupId>-->
-<!--			<artifactId>mockito-core</artifactId>-->
-<!--			<version>4.0.0</version>-->
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.sonarsource.scanner.api</groupId>-->
-<!--			<artifactId>sonar-scanner-api</artifactId>-->
-<!--			<version>2.16.2.588</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.jacoco</groupId>-->
-<!--			<artifactId>jacoco-maven-plugin</artifactId>-->
-<!--			<version>0.8.7</version>-->
-<!--		</dependency>-->
-
-
-
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-devtools</artifactId>-->
-<!--			<scope>runtime</scope>-->
-<!--			<optional>true</optional>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>com.microsoft.sqlserver</groupId>-->
-<!--			<artifactId>mssql-jdbc</artifactId>-->
-<!--			<scope>runtime</scope>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>mysql</groupId>-->
-<!--			<artifactId>mysql-connector-java</artifactId>-->
-
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-test</artifactId>-->
-<!--			<scope>test</scope>-->
-<!--		</dependency>-->
-<!--	</dependencies>-->
-
-<!--	<build>-->
-<!--		<plugins>-->
-<!--			<plugin>-->
-<!--				<groupId>org.springframework.boot</groupId>-->
-<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--				<configuration>-->
-<!--					<excludes>-->
-<!--						<exclude>-->
-<!--							<groupId>org.projectlombok</groupId>-->
-<!--							<artifactId>lombok</artifactId>-->
-<!--						</exclude>-->
-<!--					</excludes>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
-<!--		</plugins>-->
-<!--	</build>-->
-
-<!--</project>-->
-
-
-
-
-
-
-
-
-
 

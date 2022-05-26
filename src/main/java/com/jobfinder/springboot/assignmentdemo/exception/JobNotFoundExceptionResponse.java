@@ -1,7 +1,9 @@
 package com.jobfinder.springboot.assignmentdemo.exception;
 
 
+
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @ControllerAdvice
 public class JobNotFoundExceptionResponse {
@@ -16,6 +18,30 @@ public class JobNotFoundExceptionResponse {
     public JobNotFoundExceptionResponse(int status, String message, long timeStamp) {
         this.status = status;
         this.message = message;
+        this.timeStamp = timeStamp;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public long getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(long timeStamp) {
         this.timeStamp = timeStamp;
     }
 

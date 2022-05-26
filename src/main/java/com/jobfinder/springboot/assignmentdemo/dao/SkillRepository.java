@@ -1,7 +1,7 @@
 package com.jobfinder.springboot.assignmentdemo.dao;
 
 
-import com.jobfinder.springboot.assignmentdemo.entity.Job;
+
 import com.jobfinder.springboot.assignmentdemo.entity.Skill;
 
 import org.springframework.data.jpa.repository.JpaRepository;

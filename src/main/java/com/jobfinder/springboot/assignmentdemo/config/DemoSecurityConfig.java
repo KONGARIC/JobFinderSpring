@@ -26,17 +26,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http .csrf().disable() .authorizeRequests() .anyRequest().permitAll();
 
-//        http.authorizeRequests()
-//                .antMatchers("/","/").hasAnyRole("User");
-//                .and()
-//                .formLogin()
-//                .loginPage("/loginPage")
-//                .loginProcessingUrl("/authenticateTheUser")
-//                .permitAll()
-//                .and()
-//                .logout().permitAll()
-//                .and()
-//                .exceptionHandling().accessDeniedPage("/access-denied");
+
 
     }
 

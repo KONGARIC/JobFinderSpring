@@ -1,7 +1,7 @@
 package com.jobfinder.springboot.assignmentdemo.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +15,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 
-import javax.persistence.FetchType;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
@@ -42,18 +42,8 @@ public class Job {
 
 
 
-    public Job(int id, String title, String companyName, String location, List<Skill> skills) {
-        this.id = id;
-        this.title = title;
-        this.companyName = companyName;
-        this.skills = skills;
-    }
 
-    public Job(String title, String companyName, String location, List<Skill> skills) {
-        this.title = title;
-        this.companyName = companyName;
-        this.skills = skills;
-    }
+
 
     public String getCompanyName() {
         return companyName;
@@ -63,7 +53,10 @@ public class Job {
         this.companyName = companyName;
     }
 
-
+    public Job(String title, String companyName) {
+        this.title = title;
+        this.companyName = companyName;
+    }
 
     //@OneToMany(mappedBy = "skill", cascade = CascadeType.ALL)
     @OneToMany(cascade = CascadeType.ALL)
