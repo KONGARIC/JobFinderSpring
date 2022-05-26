@@ -2,7 +2,7 @@ package com.jobfinder.springboot.assignmentdemo.entity;
 
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import javax.persistence.*;
 

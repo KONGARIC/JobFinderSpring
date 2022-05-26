@@ -6,6 +6,7 @@ import com.jobfinder.springboot.assignmentdemo.dao.JobRepository;
 import com.jobfinder.springboot.assignmentdemo.entity.Job;
 
 
+import com.jobfinder.springboot.assignmentdemo.exception.JobNotFoundException;
 import com.jobfinder.springboot.assignmentdemo.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,10 +31,7 @@ public class JobServiceImpl implements JobService {
         return jobRepository.findAll();
     }
 
-    @Override
-    public Job filterAllJobBasedOnSkill(String skill) {
-        return jobRepository.filterJobBasedOnSkill(skill);
-    }
+
 
     @Override
     public void deleteJob(int id) {
@@ -46,21 +44,12 @@ public class JobServiceImpl implements JobService {
         Job job = null;
         if (result.isPresent()) {
             job = result.get();
-        } else {
-            //throw new RecordNotFoundException("Did not find Category Id - " + id);
         }
         return job;
     }
 
-    @Override
-    public List<Job> findJobTitle(String str[]) {
-        return jobRepository.findByTitle(str);
-    }
 
-    @Override
-    public List<Job> filter(String[] skills, String[] locations) {
-        return jobRepository.filter(skills,locations);
-    }
+
 
     @Override
     public void save(Job job) {
